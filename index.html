@@ -5,21 +5,274 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/boostrap.min.css">
     <title>my first boostrap</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
+
+   
     
+    <script>
+        function showProjectImages(project) {
+            const images = {
+                'Project 1': [
+                    './1.jpg',
+                    '2.jpg',
+                    '3.jpg'
+                ],
+                'Project 2': [
+                    'a.jpg',
+                    'b.jpg',
+                    'c.jpg'
+                ],
+                'Project 3': [
+                    'd.jpg',
+                    'joe.jpg',
+                    'sir.jpg'
+                ],
+                'Project 4': [
+                    'ladreal.jpg',
+                    'cole.jpg',
+                    'ankeli.jpg'
+                ] 
+            };
+
+            const gallery = document.getElementById('project-gallery');
+            gallery.innerHTML = '';
+            if (images[project]) {
+                images[project].forEach(image => {
+                    const img = document.createElement('img');
+                    img.src = image;
+                    img.alt = project;
+                    gallery.appendChild(img);
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="l.png" alt="Ankeli Pro Media Logo" class="logo">
+            <h1>Ankeli Pro Media</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="big-hero">
+        <div class="hero-overlay">
+          <div class="hero-text">
+            <h2>Capture Life’s Best Moments</h2>
+            <p>Discover the art of photography with stunning visuals that tell your story. Let us bring your vision to life.</p>
+            <a href="#services" class="hero-button">Explore Photography</a>
+          </div>
+        </div>
 
 
-<button class="btn btn-primary">
-<button class="btn btn-secondary">
-    <button class="btn btn-danger">
-<button class="btn btn-success">
-<button class="btn btn-dark">
+
+       
+      </section>
+
+      
+    
+      <!-- Services Section -->
+     
+    <section class="chi"> 
+        <div>
+    
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+         </div>
+
+
+         <div class="search-bar">
+            <input type="text" placeholder="Search for services or moments..." />
+            <button>Search</button>
+          </div>
+
+          
+       
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>I have a diverse skill set in web development, multimedia, and graphic design, honed through comprehensive training at esteemed institutions. I completed a web development program at Learnio, where I gained expertise in creating dynamic and user-friendly websites. My multimedia training at MMDA equipped me with advanced skills in digital storytelling and interactive content creation. Additionally, my graphic design education at Natures College sharpened my creative abilities, enabling me to craft visually compelling designs that align with brand objectives.
+
+            </p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Video Production</li>
+                <li>Photography</li>
+                <li>Graphic Design</li>
+                <li>Social Media Management</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item" onclick="showProjectImages('Project 1')">Project 1</div>
+                <div class="portfolio-item" onclick="showProjectImages('Project 2')">Project 2</div>
+                <div class="portfolio-item" onclick="showProjectImages('Project 3')">Project 3</div>
+                <div class="portfolio-item" onclick="showProjectImages('Project 4')">Project 4</div>
+            </div>
+            <div id="project-gallery" class="project-gallery"></div>
+        </div>
+    </section>
 
 
 
-    click me
-</button>
+
+    <section class="services">
+        <h2>WHY WORK WITH ANKELI PRO</h2>
+        <div class="services-container">
+          <div class="service-card" onclick="window.location.href='photography.html'">
+            <h3>Photography</h3>
+            <p>Capture stunning moments with our photography services.</p>
+            <button>Learn More</button>
+          </div>
+          <div class="service-card" onclick="window.location.href='web-development.html'">
+            <h3>Web Development</h3>
+            <p>Professional websites designed to grow your brand.</p>
+            <button>Learn More</button>
+          </div>
+          <div class="service-card" onclick="window.location.href='digital-marketing.html'">
+            <h3>Digital Marketing</h3>
+            <p>Boost your online presence and reach more customers.</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </section>
+
+</section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+        <h2>Book Your Session</h2>
+        <div class="booking-content">
+          <!-- Video Section -->
+          <div class="booking-video">
+            <video controls>
+              <source src="./Wedding Photography Ad - Made with PosterMyWall.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+          <!-- Booking Form -->
+          <div class="booking-form">
+            <form action="submit-booking.php" method="POST">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+              
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" name="date" required>
+              
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your session" rows="4"></textarea>
+              
+              <button type="submit" class="booking-btn">Book Now</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+
+   
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ankeli Pro Media. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section");
+    
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+    
+            sections.forEach((section) => observer.observe(section));
+        });
+    </script>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const contactSection = document.getElementById("contact");
+        const colors = ["#ff6f61", "#6a5acd", "#32cd32", "#ffa500"];
+        let index = 0;
+
+        setInterval(() => {
+            contactSection.style.backgroundColor = colors[index];
+            index = (index + 1) % colors.length;
+        }, 3000); // Change background every 3 seconds
+    });
+</script>
+
+
+
+
+
+
+    
+</body>
+</html>
 
 
 
