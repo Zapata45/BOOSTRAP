@@ -271,11 +271,24 @@ form button:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+  background: #222; 
+  padding: 20px;
+  text-align: center;
 }
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffcc00; /* Change to any color you like */
+}
+
+
 
 
 /* Section Animation */
@@ -610,32 +623,39 @@ section.visible {
     outline: none;
   }
   
-  .search-bar button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: red;
+  .search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Adjust width as needed */
+    margin: 20px auto;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background: red;
     color: white;
     border: none;
-    border-radius: 0 6px 6px 0;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .search-bar button:hover {
-    background-color: darkred;
-  }
+    transition: 0.3s;
+}
 
-  .hero-button {
-    display: inline-block;
-    text-decoration: none;
-    background-color: red;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-  }
-  
+.search-bar button:hover {
+    background: darkred;
+}
+
   .hero-button:hover {
     background-color: darkred;
   }
@@ -815,3 +835,26 @@ section.visible {
 
   #services li{color: #fff;}
 
+
+  
+  
+  
+  
+  @media (max-width: 768px) {
+    .search-bar {
+      width: 100%;  /* Make it take full width */
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-bar {
+    flex: 1;
+    min-width: 200px;  /* Prevents it from shrinking too much */
+  }
+    
