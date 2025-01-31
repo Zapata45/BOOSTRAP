@@ -835,26 +835,3 @@ section.visible {
 
   #services li{color: #fff;}
 
-
-  
-  
-  
-  
-  @media (max-width: 768px) {
-    .search-bar {
-      width: 100%;  /* Make it take full width */
-      padding: 10px;
-      font-size: 16px;
-    }
-  }
-  .search-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .search-bar {
-    flex: 1;
-    min-width: 200px;  /* Prevents it from shrinking too much */
-  }
-    
